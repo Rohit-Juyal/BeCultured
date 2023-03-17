@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header__nav {
+    display: flex;
+    gap: 4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__nav a:hover {
+    text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home {
+    margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.home__findSomething {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home__findSomething h2 {
+    color: #699BF7;
+    font-size: 1.7rem;
+}
+
+.home__findSomething button {
+    margin: 1.5rem 0;
+    padding: .5rem 1rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 1px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.recommend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recommend h2 {
+    font-size: 1.7rem;
+    color: #699BF7;
+}
+
+.recommend__movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.recommend__movie p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recommend__buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.recommend__buttons button {
+    width: 110px;
+    padding: 0.3rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.recommend__buttons .skip {
+    color: #699BF7;
+    border: 2px solid #699BF7;
+}
+
+.recommend__buttons .seen {
+    color: #fff;
+    background-color: #699BF7;
+    border: none;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 6rem;
+    margin-top: 3rem
+}
+
+.search__bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+.search__bar svg {
+    position: absolute;
+    left: 1rem;
+}
+
+.search__bar input {
+    width: 100%;
+    padding: .5rem 3rem;
+    background-color: #E2E2E2;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.search__sort {
+    display: flex;
+    align-items: center;
+    padding: .2rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.movieList {
+    margin: 2rem 6rem;
+}
+
+.movieList__heading {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+    border-bottom: 1px solid #9E9B9B;
+}
+
+.movieList__detail {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #9E9B9B;
+}
+
+.movieList__score--heading {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.movieList__score--heading button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.name button {
+    display: flex;
+    align-items: center;
+}
+
+.name svg {
+    font-size: 1.2rem;
+}
+
+.about h3 {
+    padding: 1rem 0;
+}
+
+.about__list {
+    padding-left: 1.5rem;
+}
+
+.footer {
+    padding-top: 2rem;
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .search {
+        margin: 2rem 3rem;
+    }
+
+    .search__bar  {
+        width: 40%;
+    }
+
+    .movieList {
+        margin: 2rem 3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .search {
+        margin: 2rem 2rem;
+    }
+
+    .movieList {
+        margin: 2rem 2rem;
+    }
 }
