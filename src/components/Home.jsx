@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
-import { movieDetail } from '../utils'
 import MovieList from './MovieList'
 import Recommend from './Recommend'
 import SearchMovie from './SearchMovie'
 
 const Home = () => {
   const [hidden , setHidden] = useState(false)
-  const [movieList, setMovieList] = useState(movieDetail)
+
+  const getLocalItems = () => {
+    return JSON.parse(localStorage.getItem('movies')) 
+  }
+
+  const [movieList, setMovieList] = useState(getLocalItems())
 
   return (
     <div className='home'>

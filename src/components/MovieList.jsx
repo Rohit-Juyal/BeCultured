@@ -1,6 +1,7 @@
 import { BiCheckCircle } from 'react-icons/bi'
 import { MdAddCircleOutline } from 'react-icons/md'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
+import { useEffect } from 'react'
 
 const MovieList = ({ movieList, setMovieList }) => {
 
@@ -11,6 +12,10 @@ const MovieList = ({ movieList, setMovieList }) => {
     setMovieList(newList)
   }
 
+  useEffect(() => {
+    localStorage.setItem("movies", JSON.stringify(movieList))
+  }, [movieList])
+  
   return (
     <div className='movieList'>
       <div className='movieList__heading'>
